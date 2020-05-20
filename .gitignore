@@ -9,3 +9,4 @@ logs
 *.iml
 response
 response_with_cache
+/apache-jmeter-5.2/backups/
