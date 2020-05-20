@@ -1,0 +1,11 @@
+# Logs
+logs
+*.log
+
+
+# IDE #
+.idea/
+*.swp
+*.iml
+response
+response_with_cache

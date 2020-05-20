@@ -1,0 +1,5 @@
+#### system can handle means
+
+- Whatever resource is requested by a client the response should be returned not later than in 500 milliseconds.
+- The system has to support 5000 user sessions at once
+- The system has to support 1500 submit requests at once
