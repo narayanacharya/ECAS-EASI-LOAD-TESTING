@@ -22,13 +22,13 @@
       <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="BASE_URL_2" elementType="Argument">
-            <stringProp name="Argument.name">BASE_URL_2</stringProp>
-            <stringProp name="Argument.value">172.30.203.29:8080</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="BASE_URL_1" elementType="Argument">
             <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">172.30.203.29</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
             <stringProp name="Argument.value">acquisition-uat.gsa.gov</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
@@ -78,12 +78,12 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">900</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -403,8 +403,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -437,8 +437,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/far_clause_selection</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1101,8 +1101,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">views/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1163,8 +1163,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/save_far_selection_clauses_state</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1197,8 +1197,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/gsam_selection</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1259,8 +1259,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/save_selection_clauses_state</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1321,8 +1321,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/save_selection_clauses_state</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1355,8 +1355,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/fill_in_clauses</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1431,8 +1431,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/save_selection_clauses_state</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1500,8 +1500,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/save_selection_clauses_state</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1519,12 +1519,12 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">900</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -1583,8 +1583,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1912,8 +1912,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1946,8 +1946,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/template/select</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -2278,8 +2278,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -2688,8 +2688,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3104,8 +3104,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3138,8 +3138,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/template/edit</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -3458,8 +3458,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">clauses-smart-matrix-api/template/edit/ajax/83675/23072</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -6745,8 +6745,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -10124,8 +10124,8 @@
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">system/ajax</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -10174,6 +10174,7 @@
           </value>
         </objProp>
         <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
